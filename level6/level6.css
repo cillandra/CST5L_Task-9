@@ -1,0 +1,93 @@
+body {
+    background: linear-gradient(135deg, #000000 0%, #5a5656 100%);
+    min-height: 100vh;
+}
+
+.card {
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    user-select: none;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+button, .badge, p, h1, h4 {
+    user-select: none;
+}
+
+.door-container {
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
+    flex: 1;
+}
+
+.door-container:hover {
+    transform: translateY(-5px) scale(1.05);
+}
+
+.door-container.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.door-image {
+    font-size: 3.5rem; 
+    background: linear-gradient(135deg, #8B4513, #A0522D);
+    border-radius: 10px; 
+    padding: 15px; 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border: 3px solid #654321;
+    display: inline-block; 
+}
+
+.door-label {
+    margin-top: 8px;
+    font-weight: bold;
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+.success-message {
+    color: #155724;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    text-align: center;
+    animation: fadeIn 0.5s;
+}
+
+.error-message {
+    color: #721c24;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    text-align: center;
+    animation: shake 0.5s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    75% { transform: translateX(10px); }
+}
